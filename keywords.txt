@@ -1,0 +1,42 @@
+#######################################
+# Syntax Coloring Map For CoT Arduino
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+OperationStatus	KEYWORD1
+CoTDevice	KEYWORD1
+CotSmartRestProcessor KEYWORD1
+CoTConfigDeviceTuino096 KEYWORD1
+CoTDeviceTuino096 KEYWORD1
+CoTConfigDeviceTuino096NbIoT KEYWORD1
+CotSdkMqtt KEYWORD1 
+CotSdkMqttSN KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+setDeviceId	KEYWORD2
+setCotCredentials	KEYWORD2
+registerOperation	KEYWORD2
+updateDevice	KEYWORD2
+sendAlarm	KEYWORD2
+executeOperations	KEYWORD2
+sendMeasurement	KEYWORD2
+createCloudTimestring KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+cotDevice KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+NB_IOT_MQTTSN_PWD LITERAL1
+
