@@ -1,0 +1,34 @@
+10,110,POST,/inventory/managedObjects,application/vnd.com.nsn.cumulocity.managedObject+json,application/vnd.com.nsn.cumulocity.managedObject+json,%%,STRING,"{""name"":""%%"",""c8y_IsDevice"":{},""com_cumulocity_model_Agent"":{}, ""c8y_SupportedOperations"": [""c8y_Restart"",""c8y_Command""] }"
+11,111,,"$.c8y_IsDevice","$.id","$.lastUpdated"
+
+10,120,POST,/identity/globalIds/%%/externalIds,application/vnd.com.nsn.cumulocity.externalId+json,application/vnd.com.nsn.cumulocity.externalId+json,%%,STRING STRING,"{ ""type"" : ""c8y_Serial"", ""externalId"" :""%%"" }"
+
+10,130,GET,/identity/externalIds/c8y_Serial/%%,,application/vnd.com.nsn.cumulocity.externalId+json,%%,STRING,
+11,131,,"$.externalId","$.externalId","$.managedObject.id"
+
+10,140,POST,/inventory/managedObjects,application/vnd.com.nsn.cumulocity.managedObject+json,application/vnd.com.nsn.cumulocity.managedObject+json,%%,STRING,"{""name"":""%%"",""com_IsChildDevice"":""{}""}"
+11,141,,"$.com_IsChildDevice","$.id"
+
+10,150,POST,/inventory/managedObjects/%%/childDevices,application/vnd.com.nsn.cumulocity.managedObjectReference+json,application/vnd.com.nsn.cumulocity.managedObjectReference+json,%%,STRING STRING,"{""managedObject"":{""id"":""%%""}}"
+
+10,160,GET,/inventory/managedObjects/%%/childDevices?pageSize=50,,application/vnd.com.nsn.cumulocity.managedObjectReferenceCollection+json,%%,STRING,
+11,161,"$.references","$.self","$.managedObject.id","$.managedObject.name"
+
+10,200,GET,/devicecontrol/operations?deviceId=%%&status=%%&pageSize=1,,application/vnd.com.nsn.cumulocity.operationCollection+json,%%,STRING STRING,
+
+11,201,,"$.c8y_Command","$.id", "$.status","$.c8y_Command.text"
+11,202,,"$.c8y_Restart","$.id", "$.status","$.description"
+11,203,,"$.c8y_Firmware","$.id", "$.status","$.c8y_Firmware.url"
+11,204,"$.operations","$.c8y_Command","$.id", "$.status","$.c8y_Command.text"
+
+10,211,PUT,/devicecontrol/operations/%%,application/vnd.com.nsn.cumulocity.operation+json,application/vnd.com.nsn.cumulocity.operation+json,%%,UNSIGNED STRING,"{""status"": ""%%""}"
+10,212,PUT,/devicecontrol/operations/%%,application/vnd.com.nsn.cumulocity.operation+json,application/vnd.com.nsn.cumulocity.operation+json,%%,UNSIGNED STRING STRING STRING,"{""status"": ""%%"", ""c8y_Command"":{""result"": ""%%"",""syntax"": """",""text"": ""%%""}}"
+
+10,300,PUT,/inventory/managedObjects/%%,application/vnd.com.nsn.cumulocity.managedObject+json,application/vnd.com.nsn.cumulocity.managedObject+json,%%,STRING STRING STRING STRING STRING STRING STRING STRING,"{""c8y_Hardware"":{""model"":""%%"",""revision"":""%%"",""serialNumber"":""%%""},""c8y_SoftwareList"":[{""name"":""Application"",""version"":""%%"",""url"":""none""}],""c8y_Mobile"":{""imei"":""%%"",""iccid"":""%%"",""imsi"":""%%""}}"
+10,310,PUT,/inventory/managedObjects/%%,application/vnd.com.nsn.cumulocity.managedObject+json,application/vnd.com.nsn.cumulocity.managedObject+json,%%,UNSIGNED,"{""c8y_SupportedOperations"": [ ""c8y_Configuration"",""c8y_Firmware"",""c8y_Restart"" ] }"
+10,410,POST,/measurement/measurements,application/vnd.com.nsn.cumulocity.measurement+json,application/vnd.com.nsn.cumulocity.measurement+json,%%,STRING STRING STRING NUMBER STRING DATE STRING,"{""type"":""%%"",""%%"":{""%%"":{""value"":%%,""unit"":""%%""}},""time"":""%%"",""source"":{""id"":""%%""}}"
+
+10,500,GET,/devicecontrol/operations/%%?nocache=true,,application/vnd.com.nsn.cumulocity.operation+json,%%,UNSIGNED,
+
+10,560,POST,/alarm/alarms,application/vnd.com.nsn.cumulocity.alarm+json,application/vnd.com.nsn.cumulocity.alarm+json,%%,STRING STRING STRING STRING STRING STRING,"{ ""type"": ""%%"", ""time"": ""%%"", ""text"": ""%%"", ""status"":""%%"", ""severity"": ""%%"", ""source"": { ""id"": ""%%"" } }"
+10,610,POST,/event/events,application/vnd.com.nsn.cumulocity.event+json,application/vnd.com.nsn.cumulocity.event+json,%%,STRING STRING NUMBER NUMBER NUMBER,"{ ""time"": ""%%"", ""type"": ""c8y_LocationUpdate"", ""text"": ""Positionchanged."", ""source"": { ""id"": ""%%"" }, ""c8y_Position"": {""lng"": ""%%"", ""alt"": ""%%"", ""lat"": ""%%"" } }"
