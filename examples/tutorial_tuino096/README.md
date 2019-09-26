@@ -64,7 +64,7 @@ Concept: your *CoT Tenant* is that stuff behind something like `https://<your_te
   * If no page is displayed after opening this app, choose *Template manager* in the left menu bar.
   * Also you may need to clear you browser cache, if there was an old version of the plugin installed before.
 * You finally should get the *SmartREST Template Collection Manager* displayed.
-* upload the content of [smartrest_templates.csv](../src/cot_sdk/resources/smartrest_templates.csv) - that is, copy and paste the text into the input field below the \[upload Template\] button, set the name **`CoT-MQTT-Arduino_Lib`** into the field at the left of the \[upload Template\] button and finally press that button.
+* upload the content of [smartrest_templates.csv](src/cot_sdk/resources/smartrest_templates.csv) - that is, copy and paste the text into the input field below the \[upload Template\] button, set the name **`CoT-MQTT-Arduino_Lib`** into the field at the left of the \[upload Template\] button and finally press that button.
 
 (see more about the [Cloud's SmartREST Preparation steps](./src/cot_sdk/resources/README.md))
 
