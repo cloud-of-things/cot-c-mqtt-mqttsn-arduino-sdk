@@ -77,7 +77,7 @@ void setup() {
      */
     //boardConfig->setAPN(APN);
     //boardConfig->setAPNUser(APN_User);
-    //boardConfig->setAPNPassword(APN_Passwd>);
+    //boardConfig->setAPNPassword(APN_Password);
 
     /* = Set non-default device name in the CoT =
      *
