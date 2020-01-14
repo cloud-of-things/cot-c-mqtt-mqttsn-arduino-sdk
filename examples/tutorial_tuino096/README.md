@@ -1,6 +1,8 @@
 # Tutorial for the *Tuino 096* board to connect to the *Cloud of Things*
 
 This tutorial describes how to connect to the *Cloud of Things* with the *Tuino 096* board.
+# 0. Notice for the device tuino 096
+it seems that there is a problem with the Arduino IDE on Linux and the tuino 096. If it stops responding and the LED flashes quickly, use the IDE in Windows to reactivate the device.
 
 # 1. Install the Arduino IDE
 * Download and unpack the Arduino IDE from https://www.arduino.cc/en/Main/Software
